@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CyberLearn.vn - CyberSoft.edu.vn</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap-4.5.0-dist/css/bootstrap.min.css" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css" />
+    <!--===============================================================================================-->
+
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <!--===============================================================================================-->
+</head>
+
+<body>
+    <div class="container-contact100">
+        <div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
+
+        <div class="contact100-more">
+            <i class="zmdi zmdi-phone-in-talk"></i> (+84) 961.05.10.14
+        </div>
+
+        <div class="wrap-contact100">
+            <div>
+                <img src="images/cybersoft.png" alt="Front End CyberSoft" width="40%" />
+                <span style="padding:20px"></span>
+                <img src="images/codepro.png" alt="Front End CyberSoft" width="30%" />
+
+                <div style="clear:both"></div>
+                <span class="contact100-form-title">
+                    TÍNH CƯỚC UBER
+                </span>
+                <h2>Vui lòng chọn loại xe:</h2>
+                <ul>
+                    <li class="type">
+                        <input id="uberX" type="radio" name="selector" />
+                        <label for="uberX">Uber X</label>
+
+                        <div class="check"></div>
+                    </li>
+
+                    <li class="type">
+                        <input id="uberSUV" type="radio" name="selector" />
+                        <label for="uberSUV">Uber SUV</label>
+                        <div class="check"></div>
+                    </li>
+
+                    <li class="type">
+                        <input id="uberBlack" type="radio" name="selector" />
+                        <label for="uberBlack">Uber Black</label>
+                        <div class="check"></div>
+                    </li>
+                </ul>
+            </div>
+            <div style="clear:both;"></div>
+
+            <form class="contact100-form">
+                <div class="wrap-input100 validate-input" data-validate="Name is required">
+                    <h2>Nhập vào số KM</h2>
+                    <input id="soKM" class="input100" type="text" name="name" placeholder="Số KM ..." />
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="wrap-input100 validate-input" data-validate="Name is required">
+                    <h2>Nhập thời gian chờ</h2>
+                    <input id="thoiGianCho" class="input100" type="text" name="name" placeholder="Thời gian chờ  ..." />
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-contact100-form-btn">
+                    <div class="contact100-form-bgbtn"></div>
+                    <button id="btnTinhTien" type="button" class="contact100-form-btn">
+                        TÍNH TIỀN
+                    </button>
+                </div>
+                <div class="wrap-contact100-form-btn">
+                    <div class="contact100-form-bgbtn"></div>
+                    <button type="button" class="contact100-form-btn" data-toggle="modal" data-target="#modelId" id="btnInHD">
+                        IN HÓA ĐƠN
+                    </button>
+                </div>
+            </form>
+
+            <div style="clear:both"></div>
+            <div id="divThanhTien" class="dongia">
+                <h2>
+                    Thành tiền:
+                    <span id="xuatTien" class="xuatTien"> 12345</span> vnd
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Hóa Đơn</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Chi tiết</th>
+                                <th>Sử dụng</th>
+                                <th>Đơn giá</th>
+                                <th>Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tblBody">
+                            <!-- <tr>
+                  <td>UberX</td>
+                  <td>1 km</td>
+                  <td>8000</td>
+                  <td>8000</td>
+                </tr>
+                <tr>
+                  <td>UberX</td>
+                  <td>14 km</td>
+                  <td>12000</td>
+                  <td>168000</td>
+                </tr>
+                <tr>
+                  <td>Thời gian chờ</td>
+                  <td>2 phút</td>
+                  <td>2000</td>
+                  <td>4000</td>
+                </tr>
+                <tr>
+                  <td colspan="3">Total</td>
+                  <td>180000</td>
+                </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/popper.js/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+    <script src="js/map-custom.js"></script>
+    <!--===============================================================================================-->
+
+    <script src="app.js"></script>
+</body>
+
+</html>
